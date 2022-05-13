@@ -1,0 +1,139 @@
+{
+    "id": "expenseapproval",
+    "schemaVersion": "1.1.0",
+    "name": "ExpenseApproval",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": true,
+    "content": [
+        {
+            "id": "generalInformation",
+            "type": "section",
+            "title": "General Information",
+            "content": [
+                {
+                    "id": "personnelNo",
+                    "type": "integer",
+                    "label": "Personnel No",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.personnelNo}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "personnelName",
+                    "type": "string",
+                    "label": "Personnel Name",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.toPersonnels.firstName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "personnelLastName",
+                    "type": "string",
+                    "label": "Personnel Last Name",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.toPersonnels.lastName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "projectName",
+                    "type": "string",
+                    "label": "Project Name",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.toProjects.projectName}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "date",
+                    "type": "date",
+                    "label": "Date",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.date}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "fromLocation",
+                    "type": "string",
+                    "label": "From",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.fromLocation}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "destination",
+                    "type": "string",
+                    "label": "Destination",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.destination}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "distance",
+                    "type": "float",
+                    "label": "Distance",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.distance}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "distanceUnit",
+                    "type": "string",
+                    "label": "Distance Unit",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.distanceUnit}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "amount",
+                    "type": "float",
+                    "label": "Amount",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.amount}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "currency",
+                    "type": "string",
+                    "label": "Currency",
+                    "readOnly": false,
+                    "value": "${context.kmExpenseData.currency_code}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "Approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "Reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}
